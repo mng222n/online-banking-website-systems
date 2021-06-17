@@ -2,6 +2,8 @@ package com.userFront.controller;
 
 import java.security.Principal;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -18,6 +20,9 @@ public class UserController {
 
 	@Autowired
 	private UserService userService;
+
+	@Autowired
+	private static final Logger logger = LoggerFactory.getLogger(UserController.class);
 
 	@RequestMapping(value = "/profile", method = RequestMethod.GET)
 	public String profile(Principal principal, Model model) {
@@ -40,6 +45,7 @@ public class UserController {
 		model.addAttribute("user", user);
 
 		userService.saveUser(user);
+		logger.debug("log the profile of users!");
 
 		return "profile";
 	}
