@@ -1,6 +1,7 @@
 package com.userFront.service.UserServiceImpl;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -24,7 +25,10 @@ public class AppointmentServiceImpl implements AppointmentService {
     }
 
     public Appointment findAppointment(Long id) {
-        return appointmentDao.findOne(id);
+//        Optional<appointmentDao> appointmentDaoOptional = null;
+//        appointmentDao appointmentDao = appointmentDaoOptional.get();
+//        return findById(id);
+        return null;
     }
 
     public void confirmAppointment(Long id) {
