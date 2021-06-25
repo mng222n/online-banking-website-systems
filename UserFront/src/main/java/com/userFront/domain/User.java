@@ -1,5 +1,6 @@
 package com.userFront.domain;
 
+import java.io.Serializable;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.List;
@@ -23,7 +24,7 @@ import com.userFront.domain.security.Authority;
 import com.userFront.domain.security.UserRole;
 
 @Entity
-public class User implements UserDetails{
+public class User implements UserDetails, Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -65,13 +66,13 @@ public class User implements UserDetails{
         this.userRoles = userRoles;
     }
 
-    public Long getUserId() {
-        return userId;
-    }
-
-    public void setUserId(Long userId) {
-        this.userId = userId;
-    }
+//    public Long getUserId() {
+//        return userId;
+//    }
+//
+//    public void setUserId(Long userId) {
+//        this.userId = userId;
+//    }
 
     public String getUsername() {
         return username;
