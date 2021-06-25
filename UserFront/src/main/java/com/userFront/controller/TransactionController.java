@@ -35,6 +35,11 @@ public class TransactionController {
         return null;
     }
 
+    @RequestMapping(value = "/pullback-approval-queue", method = RequestMethod.GET)
+    public String pullbackApprovalQueue(Model model) {
+        return null;
+    }
+
 
     @RequestMapping(value = "/manage-approval-history", method = RequestMethod.GET)
     public String manageApprovalHistory(Model model) {
