@@ -29,7 +29,6 @@ public class TransactionController {
         return null;
     }
 
-
     @RequestMapping(value = "/manage-approval-queue", method = RequestMethod.GET)
     public String manageApprovalQueue(Model model) {
         return null;
@@ -40,7 +39,6 @@ public class TransactionController {
         return null;
     }
 
-
     @RequestMapping(value = "/manage-approval-history", method = RequestMethod.GET)
     public String manageApprovalHistory(Model model) {
         return null;
@@ -49,6 +47,11 @@ public class TransactionController {
 
     @RequestMapping(value = "/manage-order-queue", method = RequestMethod.GET)
     public String manageOrderQueue(Model model) {
+        return null;
+    }
+
+    @RequestMapping(value = "/reject-transaction", method = RequestMethod.GET)
+    public String rejectTransaction(Model model) {
         return null;
     }
 
