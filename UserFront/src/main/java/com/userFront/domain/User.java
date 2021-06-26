@@ -27,9 +27,9 @@ import com.userFront.domain.security.UserRole;
 public class User implements UserDetails, Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "userId", nullable = false, updatable = false)
-    private Long userId;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+//    @Column(name = "userId", nullable = false, updatable = false)
+    private Long userId = 10L;
     private String username;
     private String password;
     private String firstName;
